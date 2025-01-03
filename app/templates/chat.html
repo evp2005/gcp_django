@@ -1,0 +1,78 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<main class="mainChat">
+    <div class="descripcion">
+        <div>
+            <p id="play_button">▶</p>
+            <img class="replikerImage" src="{% static '/media/f18.jpg'%}" alt="repliker" loading="lazy">
+        </div>
+        <p class="repliker_Rating">★★★★★</p>
+        <p class="repliker_Name">Marcella Torres</p>
+        <p class="repliker_Cargo">Senior Manager in Human Resources & Operations</p>
+        <p class="repliker_Dep">SKILLS</p>
+        <p class="repliker_nose">💡💡💡💡</p>
+        <p class="repliker_Dep">TASK</p>
+        <p class="repliker_nose">📝📝📝📝</p>
+        <button class="button_viewmore">Ver mas</button>
+    </div>
+    <div class="contentChatRepliker">
+        <div class="infoRepliker">
+            <img class="iconRepliker" src="{% static '/media/f18.jpg'%}" alt="repliker" loading="lazy">
+            <p>Marcella Gonzales</p>
+            <ul class="contentCompartir" id="contentCompartir">Compartir
+                <ul>
+                    <li id="linkedln">Linkedln</li>
+                    <li id="facebook">Facebook</li>
+                    <!-- <li id="instagram">Instagram</li> -->
+
+                </ul>
+            </ul>
+        </div>
+        <div class="chatRepliker">
+            <section class="chat">
+                <!-- <span class="message user">
+                    <p>Hola</p>
+                </span>
+                <span class="message ia">
+                    <p>Hola en que puedo ayudarte</p>
+                </span> -->
+            </section>
+
+            <template id="styleChat">
+                <span class="message user">
+                    <p></p>                   
+                </span>
+                <span class="message ia">                    
+                    <p></p>
+                </span>
+            </template>
+        </div>
+        <form class="input" method="post" id="formRepliker">
+            <!-- <label for="file-upload" class="file-update">⎙</label>
+            <input type="file" id="file-upload" name="file" accept=".doc,.docx,.pdf"> -->
+            <input type="text" name="message" placeholder="Ingresa tu mensaje">
+            <button type="submit">➤</button>
+        </form>
+    </div>
+    <div class="adds">
+        <span class="add1">
+            <img src="{% static '/media/add1.jpg' %}" alt="anuncio" loading="lazy">
+        </span>
+        <span class="add2">
+            <img src="{% static '/media/add1.jpg' %}" alt="anuncio" loading="lazy">
+        </span>
+    </div>
+</main>
+<span class="span_video">
+    <video width="100%" height="100%" controls>
+        <source src="https://youtu.be/917xunuQUrs?si=dQLm1ydy97DZnD5N" type="video/mp4">
+    </video>
+</span>
+<script src="{% static '/scripts/share.js'%}"></script>
+<script src="{% static '/scripts/playVideo.js'%}"></script>
+<script src="{% static '/scripts/chat.js'%}" defer></script>
+
+{% endblock %}

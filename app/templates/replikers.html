@@ -1,0 +1,71 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<main class="mainReplikers">
+    <h2 class="replikersText">Segun tus necesidades</h2>
+    <p class="replikersText">Te recomiendo los siguiente Replikers</p>
+    <div class="contentlistaReplikers">
+        <ul class="listaReplikers">
+            <li class="replikerUnico">
+                <a href="{% url 'chat' %}">
+                    <img src="{% static '/media/f18.jpg'%}" alt="repliker" loading='lazy'>
+                    <p class="nombreRepliker">Marcella Gonzales</p>
+                    <p class="especialidad">Senior Manager in Human Resources & Operations</p>
+                </a>
+            </li>
+            <!-- <li class="replikerUnico">
+                <a href="{% url 'chat' %}">
+                    <img src="{% static '/media/iconoAgente.png'%}" alt="repliker" loading='lazy'>
+                    <p class="nombreRepliker">Nombre Repliker</p>
+                    <p class="especialidad">Ingeniero ML y DL</p>
+                </a>
+            </li>
+            <li class="replikerUnico">
+                <a href="{% url 'chat' %}">
+                    <img src="{% static '/media/iconoAgente.png'%}" alt="repliker" loading='lazy'>
+                    <p class="nombreRepliker">Nombre Repliker</p>
+                    <p class="especialidad">Ingeniero ML y DL</p>
+                </a>
+            </li>
+            <li class="replikerUnico">
+                <a href="{% url 'chat' %}">
+                    <img src="{% static '/media/iconoAgente.png'%}" alt="repliker" loading='lazy'>
+                    <p class="nombreRepliker">Nombre Repliker</p>
+                    <p class="especialidad">Ingeniero ML y DL</p>
+                </a>
+            </li>
+            <li class="replikerUnico">
+                <a href="{% url 'chat' %}">
+                    <img src="{% static '/media/iconoAgente.png'%}" alt="repliker" loading='lazy'>
+                    <p class="nombreRepliker">Nombre Repliker</p>
+                    <p class="especialidad">Ingeniero ML y DL</p>
+                </a>
+            </li>
+            <li class="replikerUnico">
+                <a href="{% url 'chat' %}">
+                    <img src="{% static '/media/iconoAgente.png'%}" alt="repliker" loading='lazy'>
+                    <p class="nombreRepliker">Nombre Repliker</p>
+                    <p class="especialidad">Ingeniero ML y DL</p>
+                </a>
+            </li>
+            <li class="replikerUnico">
+                <a href="{% url 'chat' %}">
+                    <img src="{% static '/media/iconoAgente.png'%}" alt="repliker" loading='lazy'>
+                    <p class="nombreRepliker">Nombre Repliker</p>
+                    <p class="especialidad">Ingeniero ML y DL</p>
+                </a>
+            </li>
+            <li class="replikerUnico">
+                <a href="{% url 'chat' %}">
+                    <img src="{% static '/media/iconoAgente.png'%}" alt="repliker" loading='lazy'>
+                    <p class="nombreRepliker">Nombre Repliker</p>
+                    <p class="especialidad">Ingeniero ML y DL</p>
+                </a>
+            </li> -->
+        </ul>
+    </div>
+</main>
+
+{% endblock %}

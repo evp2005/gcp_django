@@ -1,0 +1,75 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/style.css'%}">
+    <script src="{% static '/scripts/global.js'%}"></script>
+    <title>RepliKers</title>
+</head>
+<body class="bodyIntro">
+    <main class="mainIndex">
+        <h1 class="titulo">Repli-Kers👤</h1>
+        <p class="text">Bienvenido a la comunidad de los RepliKers.</p>
+        <p class="text">Suma a tu fuerza de trabajo un RepliKer.</p>
+        <!-- Aqui debe ir un video -->
+        <img src="{% static '/media/capturaVideo.JPG'%}" alt="video" srcset="" class="video">
+        <div class="buttons_intro">
+            <a class="button_start" href="{% url 'replikers'%}">Fabrica tu RepliKer</a>
+            <a class="button_start" href="{% url 'replikers'%}">Contrata tu RepliKer</a>
+        </div>
+        <div class="boxAbout">
+            <div class="textAbout">
+                <h2>About Us</h2>
+                <h4>Welcome to Replikers</h4>
+                <p>Replikers is the community for the professional digital version of people. Replikers allows you to share your knowledge and experience with the world, generate additional income and reach a global audience.</p>
+                <p>With our artificial intelligence tools, we create highly personalized digital replicas that can answer questions, solve problems and provide expert advice.</p>
+                <p>Join our community of professionals and discover the power of knowledge multiplication.</p>
+                <p>Enrique Suarez, CEO</p>
+            </div>
+            <div class="collage">
+                <section class="contentCollage">
+                    <img src="{% static 'media/image1.jpeg'%}" alt="">
+                    <p>Welcome to the Community of Professional Digital Replicas of People.</p>
+                </section>
+                <section class="contentCollage">
+                    <p>At Replikers, we empower professionals to multiply their impact.</p>
+                    <img src="{% static 'media/image2.jpeg'%}" alt="">
+                </section>
+                <section class="contentCollage">
+                    <img src="{% static 'media/image3.jpeg'%}" alt="">
+                    <p>Our professional digital replicas are the next generation of tools for professionals looking to amplify their impact and generate passive and active income.</p>
+                </section>
+                <section class="contentCollage">
+                    <p>We create digital replicas that allow you to share your knowledge, generate additional income and reach new jobs.</p>
+                    <img src="{% static 'media/image4.jpeg'%}" alt="">
+                </section>
+            </div>
+        </div>
+        <div class="contentAgenteIntro">
+            <span class="contentChatAgenteIA">
+                <div class="chatAgenteIA">
+                    <!-- Aqui va el chat -->
+                </div>
+                <div class="input">
+                    <input type="text" placeholder="Ingresa su mensaje">
+                    <button type="submit">➤</button>
+                </div>
+            </span>
+            <article class="buttonAgenteIA">
+                <img src="{% static '/media/iconoAgente.png'%}" alt="ia" srcset="">
+                <div class="textAgenteIA">
+                    <p>¿Necesitas ayuda?</p>
+                    <h5>AI Agent</h5>
+                </div>
+                <p class="flecha">⇑</p>
+            </article>
+        </div>
+        
+        <p class="service_privacy">By clicking 'Empezar', you agree to our Terms of Service and Privacy Policy</p>
+    </main>
+</body>
+</html>

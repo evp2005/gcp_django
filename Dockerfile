@@ -19,4 +19,4 @@ COPY . /code/
 ENV PORT 8080
 
 # Command to run the application
-CMD gunicorn --bind :$PORT --workers 3 CopilotoDN.wsgi
+CMD gunicorn --bind :$PORT --workers 3 config.wsgi

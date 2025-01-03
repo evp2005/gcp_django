@@ -90,32 +90,32 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-if os.environ.get('K_REVISION', None):
-    SQL_HOST = env("SQL_HOST", default=None)
-    SQL_TABLE = env("SQL_TABLE", default=None)
-    SQL_USER = env("SQL_USER", default=None)
-    SQL_PASSWORD = env("SQL_PASSWORD", default=None)
+# if os.environ.get('K_REVISION', None):
+#     SQL_HOST = env("SQL_HOST", default=None)
+#     SQL_TABLE = env("SQL_TABLE", default=None)
+#     SQL_USER = env("SQL_USER", default=None)
+#     SQL_PASSWORD = env("SQL_PASSWORD", default=None)
 
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'HOST': SQL_HOST,
-            'NAME': SQL_TABLE,
-            'USER': SQL_USER,
-            'PASSWORD': SQL_PASSWORD,
-        }
-    }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'HOST': '127.0.0.1',
-            'PORT': '5432',
-            'NAME': 'postgres',
-            'USER': 'postgres',
-            'PASSWORD': 'test',
-        }
-    }
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql',
+#             'HOST': SQL_HOST,
+#             'NAME': SQL_TABLE,
+#             'USER': SQL_USER,
+#             'PASSWORD': SQL_PASSWORD,
+#         }
+#     }
+# else:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql',
+#             'HOST': '127.0.0.1',
+#             'PORT': '5432',
+#             'NAME': 'postgres',
+#             'USER': 'postgres',
+#             'PASSWORD': 'test',
+#         }
+#     }
 
 
 # Password validation

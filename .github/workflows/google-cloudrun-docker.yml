@@ -14,10 +14,6 @@ env:
   SERVICE_ACCOUNT_EMAIL: ${{ secrets.SERVICE_ACCOUNT_EMAIL }}
   SQL_INSTANCE_NAME: ${{ secrets.SQL_INSTANCE_NAME }}
   CLOUDRUN_SERVICE_URL: ${{ secrets.CLOUDRUN_SERVICE_URL }}
-  SQL_HOST: ${{ secrets.SQL_HOST }}
-  SQL_TABLE: ${{ secrets.SQL_TABLE }}
-  SQL_USER: ${{ secrets.SQL_USER }}
-  SQL_PASSWORD: ${{ secrets.SQL_PASSWORD }}
 
 jobs:
   build-and-deploy:
@@ -51,11 +47,10 @@ jobs:
           gcloud run deploy $APP_NAME \
           --region $REGION \
           --image $REGION-docker.pkg.dev/$PROJECT_ID/$REGISTRY_NAME/$APP_NAME:$GITHUB_SHA \
-          --add-cloudsql-instances $PROJECT_ID:$REGION:$SQL_INSTANCE_NAME \
           --platform "managed" \
           --service-account $SERVICE_ACCOUNT_EMAIL \
           --port 8080 \
-          --set-env-vars PROJECT_ID=$PROJECT_ID,REGION=$REGION,APP_NAME=$APP_NAME,REGISTRY_NAME=$REGISTRY_NAME,SERVICE_ACCOUNT_EMAIL=$SERVICE_ACCOUNT_EMAIL,SQL_INSTANCE_NAME=$SQL_INSTANCE_NAME,CLOUDRUN_SERVICE_URL=$CLOUDRUN_SERVICE_URL,SQL_HOST=$SQL_HOST,SQL_TABLE=$SQL_TABLE,SQL_USER=$SQL_USER,SQL_PASSWORD=$SQL_PASSWORD \
+          --set-env-vars PROJECT_ID=$PROJECT_ID,REGION=$REGION,APP_NAME=$APP_NAME,REGISTRY_NAME=$REGISTRY_NAME,SERVICE_ACCOUNT_EMAIL=$SERVICE_ACCOUNT_EMAIL,SQL_INSTANCE_NAME=$SQL_INSTANCE_NAME,CLOUDRUN_SERVICE_URL=$CLOUDRUN_SERVICE_URL\
           --quiet
 
       - name: Hacer el servicio público (Permitir invocaciones no autenticadas)

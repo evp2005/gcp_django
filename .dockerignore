@@ -1,0 +1,27 @@
+# Excluir entornos virtuales
+.venv/
+
+# Excluir archivos de desarrollo de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Excluir archivos de configuración de IDEs
+.idea/
+.vscode/
+
+# Excluir archivos temporales y del sistema operativo
+*.log
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+
+# Excluir archivos de control de versiones
+.git/
+.gitignore
+*.sqlite3
+.env
+venv/
+db.sqlite3

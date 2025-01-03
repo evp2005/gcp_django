@@ -8,13 +8,15 @@ ENV PYTHONBUFFERED 1
 # Set work directory
 WORKDIR /code
 
-# Install dependencies
-COPY Pipfile Pipfile.lock /code/
-RUN pip install pipenv && pipenv install --system
+# Copy and install dependencies
+COPY requirements.txt /code/
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy project
+# Copy project files
 COPY . /code/
 
+# Expose port for Gunicorn
 ENV PORT 8080
 
-CMD gunicorn --bind :$PORT --workers 3 config.wsgi
+# Command to run the application
+CMD gunicorn --bind :$PORT --workers 3 CopilotoDN.wsgi

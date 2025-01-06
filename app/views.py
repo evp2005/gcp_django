@@ -87,7 +87,7 @@ def chat_api(request):
                 return JsonResponse({'error': 'El mensaje del usuario está vacío'}, status=400)
 
             # Consumir la API externa
-            api_url = 'https://a18a-34-23-185-31.ngrok-free.app/ask'
+            api_url = 'https://djangogcp-922839482240.us-central1.run.app/api/ask'
             payload = {"pregunta": user_message}
             response = requests.post(api_url, json=payload)
 

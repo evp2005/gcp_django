@@ -38,7 +38,7 @@ $form.addEventListener('submit', async (event) => {
 
     try {
         // Hacer una solicitud a la API
-        const response = await fetch('/api/ask/chat/', {
+        const response = await fetch('/api/chat/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

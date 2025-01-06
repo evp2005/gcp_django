@@ -87,7 +87,7 @@ def chat_api(request):
                 return JsonResponse({'error': 'El mensaje del usuario está vacío'}, status=400)
 
             # Consumir la API externa
-            api_url = 'http://localhost:5000/api/ask'
+            api_url = 'https://agenterepliker25-922839482240.us-central1.run.app/ask'
             payload = {"pregunta": user_message}
             response = requests.post(api_url, json=payload)
 
